@@ -8,11 +8,11 @@
         <style>
 
             .main_body {
-            background-image: linear-gradient(45deg, #53bbe6 15%, #ff8d8d 90%);
+            background-image: linear-gradient(45deg, #fefae0 15%, #faedcd 90%);
             padding: 2rem;
             direction: str;
             font-family:geneva;
-            color:midnightblue;
+            color:#283618;
             font-size:20px
             }
 
@@ -21,23 +21,24 @@
             top:0;
             right:0;
             border-radius: 50px;
-            background: #6b7bbd;
-            box-shadow: inset 25px 25px 49px #5b69a1;
+            background: #dda15e;
+            box-shadow: inset 25px 25px 49px #dda15e;
             margin: 80 px;
             padding-right: 30px;
             padding-left: 30px;
-            border:2px solid dodgerblue;
+            border:2px solid #283618;
             text-align: center;
             font-size:40px
             }
 
             .list_box{
-            color: cornflowerblue;
-            background: rgb(19,73,20);
+            position:absolute;
+            color: #fefae0;
+            background: #606c38;
             list-style-position: inside;
-            top:400px;
+            top:100px;
             margin:100px;
-            width:400px;
+            width:360px;
             padding:4px;
             }
 
@@ -57,15 +58,16 @@
                 font-style: normal;
             }
 
-           .form{
-            background-image: linear-gradient(45deg, #53bbe6 15%, #ff8d8d 90%);
+           .form_style{
+            background-image: linear-gradient(45deg, #bc6c25 15%, #d4a373 90%);
             padding: 2rem;
             direction: str;
             font-family:geneva;
-            color:indigo;
             font-size:20px;
             border: 5px solid;
             border-color:beige;
+            border-radius:9px;
+            width:500px;
            }
 
         </style>
@@ -84,7 +86,7 @@
        <b>Taking a trip? Stressed about packing? We're here to help!</b>
        <br>Answer a few simple questions and we'll help you decide what you need to pack.
 <hr>
-        <form id="destination_form">
+        <form class="form_style" id="destination_form">
             
         <label for="destination"><b> What's the weather like at your destination?</b></label><br>
             <!-- <input type="radio" id="warm" name="destination" value="WARM">
@@ -118,7 +120,7 @@
        </form>
     </div>    
 <hr>
-<div class="list_box">
+<div class="list_box" style="left:550px">
 <p>For a one day trip, you need to pack:
 <ul id="final_list">
     <li>
@@ -148,7 +150,7 @@
 </ul>
 </div>
 
-<div class="list_box" style="left:500px">
+<div class="list_box" style="left:950px">
     For your trip, you need to pack
     <ul id="final_list"></ul>
 </div>
