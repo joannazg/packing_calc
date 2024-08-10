@@ -4,106 +4,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">    
-        <title>Joanna's Page </title> 
-        <style>
-
-            .main_body {
-            background-image: linear-gradient(45deg, #fefae0 15%, #faedcd 90%);
-            padding: 2rem;
-            direction: str;
-            font-family:geneva;
-            color:#283618;
-            font-size:20px
-            }
-
-            .main_header{
-            position: fixed;
-            top:0;
-            right:0;
-            border-radius: 50px;
-            background: #dda15e;
-            box-shadow: inset 25px 25px 49px #dda15e;
-            margin: 80 px;
-            padding-right: 30px;
-            padding-left: 30px;
-            border:2px solid #283618;
-            text-align: center;
-            font-size:40px
-            }
-
-            .list_box{
-            position:absolute;
-            color: #fefae0;
-            background: #606c38;
-            list-style-position: inside;
-            top:100px;
-            margin:100px;
-            width:360px;
-            padding:4px;
-            }
-
-            .picture{
-                border: 5px solid;
-                border-color: darkslateblue;
-                width:300px;
-                height:200px;
-                margin: 20px;
-                border-radius: 9px;
-            }
-
-            .aus_font {
-                font-family: "Edu AU VIC WA NT Hand", cursive;
-                font-optical-sizing: auto;
-                font-weight: 300;
-                font-style: normal;
-            }
-
-           .form_style{
-            background-image: linear-gradient(45deg, #bc6c25 15%, #d4a373 90%);
-            padding: 2rem;
-            direction: str;
-            font-family:geneva;
-            font-size:20px;
-            border: 5px solid;
-            border-color:beige;
-            border-radius:9px;
-            width:500px;
-           }
-
-        </style>
+    <link rel="stylesheet" type="text/css" href="style_sheet.css" />
+    <title>Joanna's Packing Calculator </title> 
      </head>
 
-
-        <!-- 
-איזה אתר מגניב כל הכבוד לי
-         -->
    
  <div class="main_header aus_font">
          <I> Joanna's Packing Calculator </I>
  </div>
-    <body class="main_body">
+<body class="main_body">
     <div class="forms"></div>
-       <b>Taking a trip? Stressed about packing? We're here to help!</b>
-       <br>Answer a few simple questions and we'll help you decide what you need to pack.
+        <b>Taking a trip? Stressed about packing? We're here to help!</b>
+        <br>Answer a few simple questions and we'll help you decide what you need to pack.
 <hr>
         <form class="form_style" id="destination_form">
             
         <label for="destination"><b> What's the weather like at your destination?</b></label><br>
-            <!-- <input type="radio" id="warm" name="destination" value="WARM">
-            <label for="warm">warm</label><br>-->
             <input type="radio" id="hot" name="destination" value="HOT">
             <label for="hot">hot</label><br>
-            <!-- <input type="radio" id="cool" name="destination" value="COOL">
-            <label for="cool">cool</label><br>-->
             <input type="radio" id="cold" name="destination" value="COLD">
             <label for="cold">cold</label><br>
             <input type="radio" id="rainy" name="destination" value="RAINY">
             <label for="rainy">rainy</label><br>
             <input type="radio" id="snowy" name="destination" value="SNOWY">
             <label for="snowy">snowy</label>
-            <br>
-            <br>
-        
+             <!-- <input type="radio" id="warm" name="destination" value="WARM">
+            <label for="warm">warm</label><br>-->
+            <!-- <input type="radio" id="cool" name="destination" value="COOL">
+            <label for="cool">cool</label><br>-->
+        <br>
+        <br>
         <label for="fancy"><b>  Any fancy events?</b></label><br>
             <input type="radio" id="yes_fancy" name="fancy" value="FANCY">
             <label for="fancy">yes</label><br>
@@ -120,96 +50,41 @@
        </form>
     </div>    
 <hr>
-<div class="list_box" style="left:550px">
-<p>For a one day trip, you need to pack:
-<ul id="final_list">
-    <li>
-        1 pair of shorts
-    </li>
-    <li>
-        1 pair of pants
-    </li>
-    <li>
-        1 T-Shirt
-    </li>
-    <li>
-        1 Long Sleeved Shirt
-    </li>
-    <li>
-        1 pair of socks
-    </li>
-    <li>
-        1 pair of underware
-    </li>
-    <li>
-        1 pair of shoes
-    </li>
-    <li>
-        toiletries
-    </li>
-</ul>
-</div>
+    <div class="list_box" style="left:550px">
+    <p>For a one day trip, you need to pack:
+    <ul id="final_list">
+        <li>
+            1 pair of shorts
+        </li>
+        <li>
+            1 pair of pants
+        </li>
+        <li>
+            1 T-Shirt
+        </li>
+        <li>
+            1 Long Sleeved Shirt
+        </li>
+        <li>
+            1 pair of socks
+        </li>
+        <li>
+            1 pair of underware
+        </li>
+        <li>
+            1 pair of shoes
+        </li>
+        <li>
+            toiletries
+        </li>
+    </ul>
+    </div>
 
-<div class="list_box" style="left:950px">
-    For your trip, you need to pack
-    <ul id="final_list"></ul>
-</div>
-
-<script>
-  
-    body.getElementById('destination_form').addEventListener('submit', function(packing_amount)
-    {
-    // Prevent the form from submitting normally
-    packing_amount.preventDefault();
-
-    var destination = body.getElementById('destination').value;
-    var fancy = body.getElementById('fancy').value;
-    var trip_length = body.getElementById('trip_length').value;
-
-
-        const packing_list= (.25,"shorts",.25, "pants",1, "t-shirts",.5, "long sleeved shirts",1, "underwear",1, "socks")
-        
-        for (let x in packing_list)
-            {
-                packing_list[x]*=trip_length;
-                x=x+2;
-            }
-
-        function packing_extras(fancy,destination)
-        {
-            if (fancy==FANCY)
-            {
-                packing_list.push(1, "fancy outfit");
-            }
-
-            if (destination == SNOWY || destination == COLD)
-            {
-                packing_list.push(1,"jacket");
-                packing_list[0].delete();
-                packing_list[1].delete();
-                packing_list[4]/=2;
-            }
-
-            if (destination == HOT)
-            {
-                packing_list[2].delete();
-                packing_list[3].delete();
-                packing_list[6].delete();
-                packing_list[7].delete();  
-            }
-            
-            if (destination == RAINY)
-            {
-                packing_list.push(1,"Raincoat")
-            }
-        return packing_list;
-        }
-        
-    body.getElementById("final_list").innerHTML = packing_list;
-    })
-    
-</script>
-
+    <div class="list_box" style="left:950px">
+        For your trip, you need to pack
+        <ul id="final_list"></ul>
+    </div>
+    <script src="./packing_script.js"></script>
     </body>
 
 </html>
