@@ -66,7 +66,7 @@ document.getElementById("destination_form").addEventListener("submit", function 
         }
     });
 
-  document.getElementById("packing_questions").style.display = "none";
-  document.getElementById("sample_list").style.display = "none";
+ // document.getElementById("packing_questions").style.display = "none";
+ // document.getElementById("sample_list").style.display = "none";
   document.getElementById("list_result").style.display = "block";
 });
